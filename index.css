@@ -1,7 +1,26 @@
-*, *::before, *::after { box-sizing: border-box; } /* Unite the box model */
+/* Import JetBrainsMono Nerd font for textual icons */
+@font-face {
+  font-family: "JetBrainsMonoNerd";
+  src: url("./fonts/JetBrainsMonoNerdFontMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMonoNerd";
+  src: url("./fonts/JetBrainsMonoNerdFontMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Unite the box model */
+*, *::before, *::after { box-sizing: border-box; }
 
 /* Dark mode color scheme */
 body {
+    font-family: "JetBrainsMonoNerd", monospace;
     background-color: black;
     color: white;
 }
