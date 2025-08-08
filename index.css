@@ -66,7 +66,9 @@ body {
     align-items: center;
 }
 
-.db-button:hover {
+/* Button style on hover or pressing shortcut */
+.db-button:hover,
+.db-button-select {
     background-color: lightgrey;
     color: black;
     cursor: pointer;
