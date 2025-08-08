@@ -3,17 +3,17 @@ const menu = [
     {
         text: " About Me",
         sc: "a",
-        dest: "./aboutMe.html"
+        dest: "./nav/aboutme/aboutme.html"
     },
     {
         text: "󰛨 Projects",
         sc: "p",
-        dest: "./projects.html"
+        dest: "./nav/projects/projects.html"
     },
     {
         text: "󰋄 Music",
         sc: "m",
-        dest: "./music.html"
+        dest: "./nav/music/music.html"
     },
 ]
 

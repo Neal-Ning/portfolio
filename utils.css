@@ -1,0 +1,28 @@
+/* Dashboard section holding the buttons */
+.db-buttons {
+    min-height: 0px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+}
+
+/* A dashboard div holding a button */
+.db-button {
+    min-height: 0px;
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button style on hover or pressing shortcut */
+.db-button:hover,
+.db-button-select {
+    background-color: lightgrey;
+    color: black;
+    cursor: pointer;
+}
