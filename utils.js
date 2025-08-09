@@ -70,6 +70,13 @@ export function addButtonKeyListeners() {
     });
 }
 
+// Load json data from the data folder
+export async function loadData(name) {
+    const response = await fetch(`/data/${name}`);
+    if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
+    return await response.json();
+}
+
 // Display the data in structure: Name, text, exp, links
 export function displayData(container, data) {
     // Find container and make divider
