@@ -4,7 +4,6 @@ import * as utils from "/utils.js";
 const backButtonContainer = document.querySelector(".cjs-back-button");
 utils.createBackButton(backButtonContainer, "/index.html");
 
-
 const projects = [
     {
         name: "󰌌 Project zero",
@@ -28,7 +27,7 @@ const projects = [
 
 
 // Select the project container
-const projectContainer = document.querySelector(".cjs-project-container");
+const projectContainer = document.querySelector(".flex-grow-container");
 
 // Create all project buttons
 projects.forEach(({name, desc, sc, dest, data}) => {

@@ -18,16 +18,42 @@
 /* Unite the box model */
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Dashboard section holding the buttons */
-.db-buttons {
+/* Dark mode color scheme */
+body {
+    font-family: "JetBrainsMonoNerd", monospace;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    margin: 0px;
+}
+
+/* A general display container for nav pages, holds flex-grow-containers and buttons*/
+.display-container {
+    width: 75%;
+    height: 100vh;
+    margin: 0 auto 0;
+    padding: 50px 0px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* A reusable flex-grow and scroll on overflow data container */
+.flex-grow-container {
+    flex-grow: 1;
+    overflow: scroll;
+}
+
+/* A reusable column wise flex container class */
+.flex-container {
     min-height: 0px;
 
     display: flex;
     flex-direction: column;
 }
 
-/* A dashboard div holding a button */
-.db-button {
+/* A div button class */
+.button {
     padding: 20px 10px;
     font-size: 30px;
 
@@ -38,21 +64,23 @@
 }
 
 /* Button style on hover or pressing shortcut */
-.db-button:hover,
-.db-button-select {
+.button:hover,
+.button-select {
     background-color: lightgrey;
     color: black;
     cursor: pointer;
 }
 
-.db-divider {
+/* Solid divider (primary dividers) */
+.divider {
     border: none;
     border-top: 2px solid white; 
     margin: 10px 0;
     width: 100%;
 }
 
-.db-divider-dotted {
+/* Dashed divider (secondary dividers) */
+.divider-dashed {
     border: none;
     border-top: 2px dashed white;
     margin: 10px 0;

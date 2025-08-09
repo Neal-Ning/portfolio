@@ -4,7 +4,7 @@ import * as utils from "/utils.js";
 const backButtonContainer = document.querySelector(".cjs-back-button");
 utils.createBackButton(backButtonContainer, "/index.html");
 
-const container = document.querySelector(".cjs-music-container");
+const container = document.querySelector(".flex-grow-container");
 container.innerHTML = `
     <div style="
         font-size: 50px; 

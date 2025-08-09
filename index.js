@@ -20,7 +20,7 @@ const menu = [
 ]
 
 // Select the button container
-const buttons = document.querySelector(".db-buttons");
+const buttons = document.querySelector(".flex-container");
 
 // Create all menu buttons
 menu.forEach(({name, sc, dest}) => {

@@ -1,12 +1,5 @@
 @import url("/utils.css");
 
-/* Dark mode color scheme */
-body {
-    font-family: "JetBrainsMonoNerd", monospace;
-    background-color: black;
-    color: white;
-}
-
 /* Dashboard container grid holding the header and the buttons */
 .db-container {
     width: fit-content;

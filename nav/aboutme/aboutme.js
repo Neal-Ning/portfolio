@@ -33,7 +33,7 @@ const aboutmeInfo = {
     ]
 }
 
-const container = document.querySelector(".cjs-aboutme-container");
+const container = document.querySelector(".flex-grow-container");
 utils.displayData(container, aboutmeInfo);
 
 utils.addButtonKeyListeners();

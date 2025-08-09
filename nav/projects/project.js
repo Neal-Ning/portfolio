@@ -53,7 +53,7 @@ function getSingleProjectData() {
 }
 
 const data = getSingleProjectData();
-const container = document.querySelector(".cjs-project-display-container");
+const container = document.querySelector(".flex-grow-container");
 utils.displayData(container, data);
 
 utils.addButtonKeyListeners();

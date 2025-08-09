@@ -2,7 +2,7 @@
 export function createButton(buttons, name, desc, sc, dest, data) {
     // Create div to contain text, shortcut key text, and some data
     const menuItemDiv = document.createElement("div");
-    menuItemDiv.classList.add("db-button");
+    menuItemDiv.classList.add("button");
     menuItemDiv.dataset.sc = sc;
         menuItemDiv.dataset.dest = dest;
     if (data) {
@@ -39,13 +39,13 @@ export function addButtonKeyListeners() {
                 scrollable.scrollTop -= step;
             }
         }
-        const btn = document.querySelector(`.db-button[data-sc="${event.key.toLowerCase()}"]`);
-        if (btn) btn.classList.add("db-button-select");
+        const btn = document.querySelector(`.button[data-sc="${event.key.toLowerCase()}"]`);
+        if (btn) btn.classList.add("button-select");
     });
     document.body.addEventListener("keyup", (event) => {
-        const btn = document.querySelector(`.db-button[data-sc="${event.key.toLowerCase()}"]`);
+        const btn = document.querySelector(`.button[data-sc="${event.key.toLowerCase()}"]`);
         if (btn) {
-            btn.classList.remove("db-button-select");
+            btn.classList.remove("button-select");
             window.location.href = btn.dataset.dest; 
         }
     });
@@ -56,7 +56,7 @@ export function displayData(container, data) {
     // Find container and make divider
     const {name, text, exp, links} = data;
     const divider = document.createElement("div");
-    divider.classList.add('db-divider-dotted');
+    divider.classList.add('divider-dashed');
 
     // Create a project name title
     const nameEle = document.createElement("p");
@@ -87,7 +87,7 @@ export function displayData(container, data) {
     
     // Create div for project links
     const linksEle = document.createElement("div");
-    linksEle.classList.add("db-buttons");
+    linksEle.classList.add("flex-container");
     links.forEach(link => {
         createButton(linksEle, link.text, "", link.sc, link.href, "");
     });
