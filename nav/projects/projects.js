@@ -4,24 +4,67 @@ import * as utils from "/utils.js";
 const backButtonContainer = document.querySelector(".cjs-back-button");
 utils.createBackButton(backButtonContainer, "/index.html");
 
+// Example projects, will be replaced by own projects from data base
 const projects = [
     {
-        name: "󰌌 Project zero",
-        desc: "An AI travel planner",
+        name: "󰕒 BudgetBuddy", // calculator icon
+        desc: "A personal finance tracker",
         sc: "q",
-        dest: "project.html?name=Project%20Zero",
+        dest: "project.html?name=BudgetBuddy",
     },
     {
-        name: "󰌌 Project One",
-        desc: "In this project I collaborated with a company to make an app",
+        name: "󰖔 SkyCast", // cloud icon
+        desc: "A weather forecast web app",
         sc: "w",
-        dest: "a",
+        dest: "project.html?name=SkyCast",
     },
     {
-        name: "󰌌 Project Two",
-        desc: "In this project I contributed to an open source github repo",
+        name: "󰈤 QuizArena", // game controller icon
+        desc: "A multiplayer quiz game",
         sc: "e",
-        dest: "b",
+        dest: "project.html?name=QuizArena",
+    },
+    {
+        name: "󰆍 RecipeGenie", // magic wand icon
+        desc: "An AI-powered recipe generator",
+        sc: "r",
+        dest: "project.html?name=RecipeGenie",
+    },
+    {
+        name: "󰄉 HabitHero", // checkmark icon
+        desc: "A daily habit tracker",
+        sc: "t",
+        dest: "project.html?name=HabitHero",
+    },
+    {
+        name: "󰈙 NoteLite", // notebook icon
+        desc: "A lightweight note-taking app",
+        sc: "y",
+        dest: "project.html?name=NoteLite",
+    },
+    {
+        name: "󰖆 FitPlanner", // dumbbell icon
+        desc: "A workout routine planner",
+        sc: "u",
+        dest: "project.html?name=FitPlanner",
+    },
+    {
+        name: "󰔳 StockWatch", // chart icon
+        desc: "A stock market tracking tool",
+        sc: "i",
+        dest: "project.html?name=StockWatch",
+    },
+    {
+        name: "󰎈 MelodyMix", // music note icon
+        desc: "A music playlist generator",
+        sc: "o",
+        dest: "project.html?name=MelodyMix",
+    },
+    {
+        name: "󰄛 CalmClock", // clock icon
+        desc: "A mindfulness meditation timer",
+        sc: "p",
+        dest: "project.html?name=CalmClock",
     },
 ];
 
