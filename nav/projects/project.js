@@ -52,48 +52,8 @@ function getSingleProjectData() {
     return projectData.find(data => data.name === projectName);
 }
 
-function displayProjectData() {
-    // Find container and make divider
-    const container = document.querySelector(".cjs-project-display-container");
-    const {name, text, exp, links} = getSingleProjectData();
-    const divider = document.createElement("div");
-    divider.classList.add('db-divider-dotted');
-
-    // Create a project name title
-    const nameEle = document.createElement("p");
-    nameEle.innerText = name;
-    nameEle.style = "font-size: 30px; font-weight: bold";
-    container.appendChild(nameEle);
-    container.appendChild(divider.cloneNode());
-
-    // Create div for detailed project description
-    const textEle = document.createElement("div");
-    text.forEach(paragraph => {
-        const paragraphEle = document.createElement("p");
-        paragraphEle.innerText = paragraph;
-        textEle.appendChild(paragraphEle);
-    });
-    container.appendChild(textEle);
-    container.appendChild(divider.cloneNode());
-
-    // Create div for skills and experiences
-    const expEle = document.createElement("div");
-    exp.forEach(point => {
-        const eEle = document.createElement("p");
-        eEle.innerText = point;
-        expEle.appendChild(eEle);
-    });
-    container.appendChild(expEle);
-    container.appendChild(divider.cloneNode());
-    
-    // Create div for project links
-    const linksEle = document.createElement("div");
-    linksEle.classList.add("db-buttons");
-    links.forEach(link => {
-        utils.createButton(linksEle, link.text, "", link.sc, link.href, "");
-    });
-    container.appendChild(linksEle);
-}
-displayProjectData();
+const data = getSingleProjectData();
+const container = document.querySelector(".cjs-project-display-container");
+utils.displayData(container, data);
 
 utils.addButtonKeyListeners();

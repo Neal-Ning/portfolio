@@ -40,22 +40,56 @@ export function addButtonKeyListeners() {
             }
         }
         const btn = document.querySelector(`.db-button[data-sc="${event.key.toLowerCase()}"]`);
-        if (btn) {event.preventDefault(); btn.classList.add("db-button-select");}
+        if (btn) btn.classList.add("db-button-select");
     });
     document.body.addEventListener("keyup", (event) => {
         const btn = document.querySelector(`.db-button[data-sc="${event.key.toLowerCase()}"]`);
         if (btn) {
-            event.preventDefault();
             btn.classList.remove("db-button-select");
-            if (btn.dataset.dest) {
-                window.location.href = btn.dataset.dest; 
-            } else if (btn.dataset.data) {
-                loadButtonData(JSON.parse(btn.dataset.data));
-            }
+            window.location.href = btn.dataset.dest; 
         }
     });
 }
 
-function loadButtonData(data) {
-    console.log(data);
+// Display the data in structure: Name, text, exp, links
+export function displayData(container, data) {
+    // Find container and make divider
+    const {name, text, exp, links} = data;
+    const divider = document.createElement("div");
+    divider.classList.add('db-divider-dotted');
+
+    // Create a project name title
+    const nameEle = document.createElement("p");
+    nameEle.innerText = name;
+    nameEle.style = "font-size: 30px; font-weight: bold";
+    container.appendChild(nameEle);
+    container.appendChild(divider.cloneNode());
+
+    // Create div for detailed project description
+    const textEle = document.createElement("div");
+    text.forEach(paragraph => {
+        const paragraphEle = document.createElement("p");
+        paragraphEle.innerText = paragraph;
+        textEle.appendChild(paragraphEle);
+    });
+    container.appendChild(textEle);
+    container.appendChild(divider.cloneNode());
+
+    // Create div for skills and experiences
+    const expEle = document.createElement("div");
+    exp.forEach(point => {
+        const eEle = document.createElement("p");
+        eEle.innerText = point;
+        expEle.appendChild(eEle);
+    });
+    container.appendChild(expEle);
+    container.appendChild(divider.cloneNode());
+    
+    // Create div for project links
+    const linksEle = document.createElement("div");
+    linksEle.classList.add("db-buttons");
+    links.forEach(link => {
+        createButton(linksEle, link.text, "", link.sc, link.href, "");
+    });
+    container.appendChild(linksEle);
 }

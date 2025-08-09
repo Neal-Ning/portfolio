@@ -2,7 +2,7 @@ import * as utils from "/utils.js";
 
 // Create a back button to the index page
 const backButtonContainer = document.querySelector(".cjs-back-button");
-const backButton = utils.createBackButton(backButtonContainer, "/index.html");
+utils.createBackButton(backButtonContainer, "/index.html");
 
 
 const projects = [
