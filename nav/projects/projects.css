@@ -1,22 +1,4 @@
-/* Import JetBrainsMono Nerd font for textual icons */
-@font-face {
-  font-family: "JetBrainsMonoNerd";
-  src: url("../../fonts/JetBrainsMonoNerdFontMono-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrainsMonoNerd";
-  src: url("../../fonts/JetBrainsMonoNerdFontMono-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Unite the box model */
-*, *::before, *::after { box-sizing: border-box; }
+@import url("/utils.css");
 
 /* Dark mode color scheme */
 body {
@@ -24,30 +6,21 @@ body {
     font-size: 25px;
     background-color: black;
     color: white;
+    margin: 0px;
 }
 
 .display-container {
-    width: fit-content;
-    margin: 50px auto 0;
-}
-
-
-/* A dashboard div holding a button */
-.back-button {
-    min-height: 0px;
-    padding-left: 5px;
-    padding-right: 10px;
-    font-size: 30px;
+    width: 75%;
+    height: 100vh;
+    margin: 0 auto 0;
+    padding: 50px 0px;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
-/* Button style on hover or pressing shortcut */
-.back-button:hover,
-.db-button-select {
-    background-color: lightgrey;
-    color: black;
-    cursor: pointer;
+.cjs-project-container {
+
+    flex-grow: 1;
+    overflow: scroll;
 }
