@@ -40,8 +40,9 @@ body {
 
 /* A reusable flex-grow and scroll on overflow data container */
 .flex-grow-container {
-    flex-grow: 1;
-    overflow: scroll;
+    flex: 1 1 0%;
+    min-height: 0;
+    overflow: auto;
 }
 
 /* A reusable column wise flex container class */
