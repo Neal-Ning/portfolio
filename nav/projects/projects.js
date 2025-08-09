@@ -2,65 +2,28 @@ import * as utils from "/utils.js";
 
 // Create a back button to the index page
 const backButtonContainer = document.querySelector(".cjs-back-button");
-utils.createBackButton(backButtonContainer, "/index.html");
+const backButton = utils.createBackButton(backButtonContainer, "/index.html");
 
 
 const projects = [
     {
-        text: "󰌌 Project zero",
+        name: "󰌌 Project zero",
+        desc: "An AI travel planner",
         sc: "q",
-        dest: "",
+        dest: "project.html?name=Project%20Zero",
     },
     {
-        text: "󰌌 Project One - In this project I collaborated with a company to make an app",
+        name: "󰌌 Project One",
+        desc: "In this project I collaborated with a company to make an app",
         sc: "w",
-        dest: "",
+        dest: "a",
     },
     {
-        text: "󰌌 Project Two - In this project I contributed to an open source github repo",
+        name: "󰌌 Project Two",
+        desc: "In this project I contributed to an open source github repo",
         sc: "e",
-        dest: "",
+        dest: "b",
     },
-    {
-        text: "󰌌 Project One - In this project I collaborated with a company to make an app",
-        sc: "w",
-        dest: "",
-    },
-    {
-        text: "󰌌 Project Two - In this project I contributed to an open source github repo",
-        sc: "e",
-        dest: "",
-    },
-    {
-        text: "󰌌 Project One - In this project I collaborated with a company to make an app",
-        sc: "w",
-        dest: "",
-    },
-    {
-        text: "󰌌 Project Two - In this project I contributed to an open source github repo",
-        sc: "e",
-        dest: "",
-    },
-    {
-        text: "󰌌 Project One - In this project I collaborated with a company to make an app",
-        sc: "w",
-        dest: "",
-    },
-    {
-        text: "󰌌 Project Two - In this project I contributed to an open source github repo",
-        sc: "e",
-        dest: "",
-    },
-    {
-        text: "󰌌 Project One - In this project I collaborated with a company to make an app",
-        sc: "w",
-        dest: "",
-    },
-    {
-        text: "󰌌 Project Two - In this project I contributed to an open source github repo",
-        sc: "e",
-        dest: "",
-    }
 ];
 
 
@@ -68,8 +31,8 @@ const projects = [
 const projectContainer = document.querySelector(".cjs-project-container");
 
 // Create all project buttons
-projects.forEach(({text, sc, dest}) => {
-    utils.createButton(projectContainer, text, sc, dest);
+projects.forEach(({name, desc, sc, dest, data}) => {
+    utils.createButton(projectContainer, name, desc, sc, dest, data);
 });
 
 // Add keydown / keyup listeners for buttons

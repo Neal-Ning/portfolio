@@ -45,3 +45,16 @@
     cursor: pointer;
 }
 
+.db-divider {
+    border: none;
+    border-top: 2px solid white; 
+    margin: 10px 0;
+    width: 100%;
+}
+
+.db-divider-dotted {
+    border: none;
+    border-top: 2px dashed white;
+    margin: 10px 0;
+    width: 99%;
+}

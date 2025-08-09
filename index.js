@@ -3,17 +3,17 @@ import * as utils from "/utils.js";
 // List of menu items
 const menu = [
     {
-        text: " About Me",
+        name: " About Me",
         sc: "a",
         dest: "/nav/aboutme/aboutme.html"
     },
     {
-        text: "󰛨 Projects",
+        name: "󰛨 Projects",
         sc: "p",
         dest: "/nav/projects/projects.html"
     },
     {
-        text: "󰋄 Music",
+        name: "󰋄 Music",
         sc: "m",
         dest: "/nav/music/music.html"
     },
@@ -23,8 +23,8 @@ const menu = [
 const buttons = document.querySelector(".db-buttons");
 
 // Create all menu buttons
-menu.forEach(({text, sc, dest}) => {
-    utils.createButton(buttons, text, sc, dest);
+menu.forEach(({name, sc, dest}) => {
+    utils.createButton(buttons, name, "", sc, dest);
 });
 
 // Add keydown / keyup listeners for buttons
