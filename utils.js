@@ -21,31 +21,50 @@ export function createButton(buttons, name, desc, sc, dest, data) {
     return menuItemDiv;
 }
 
-// Create a button that leads back to index page
+// Create a button that leads back to a specified page
 export function createBackButton(buttons, dest) {
     createButton(buttons, "󰌍 Back", "", "b", dest);
 }
 
 // Listens for pressing of the short cut keys of each menu item
+// Also listens for scrolling with j and k
 export function addButtonKeyListeners() {
+    let scrollInterval = null;
     document.body.addEventListener("keydown", (event) => {
-        const scrollable = document.querySelector(".scrollable");
-        const step = 40;
-        if (scrollable) {
-            event.preventDefault();
-            if (event.key.toLowerCase() === "j") {
-                scrollable.scrollTop += step;
-            } else if (event.key.toLowerCase() === "k") {
-                scrollable.scrollTop -= step;
+        const key = event.key.toLowerCase();
+
+        // If scroll keys held, scroll every 16 millisecond
+        if (key === "j" || key === "k") {
+            const scrollable = document.querySelector(".scrollable");
+            if (scrollable) {
+                event.preventDefault();
+                const step = key === "j" ? 10 : -10;
+                if (!scrollInterval) {
+                    scrollInterval = setInterval(() => {
+                        scrollable.scrollTop += step;
+                    }, 16);
+                }
             }
         }
-        const btn = document.querySelector(`.button[data-sc="${event.key.toLowerCase()}"]`);
+
+        // Add key press select animation
+        const btn = document.querySelector(`.button[data-sc="${key}"]`);
         if (btn) btn.classList.add("button-select");
     });
     document.body.addEventListener("keyup", (event) => {
-        const btn = document.querySelector(`.button[data-sc="${event.key.toLowerCase()}"]`);
+        const key = event.key.toLowerCase();
+
+        // If scroll keys released, stop the interval timer
+        if (key === "j" || key === "k") {
+            clearInterval(scrollInterval);
+            scrollInterval = null;
+        }
+
+        // Add key release select animation
+        const btn = document.querySelector(`.button[data-sc="${key}"]`);
         if (btn) {
             btn.classList.remove("button-select");
+            // Navigate to the page corresponding to the selected button
             window.location.href = btn.dataset.dest; 
         }
     });
