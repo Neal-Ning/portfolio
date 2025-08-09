@@ -20,7 +20,6 @@ body {
 }
 
 .cjs-project-container {
-
     flex-grow: 1;
     overflow: scroll;
 }

@@ -17,8 +17,8 @@ export function createButton(buttons, text, sc, dest) {
 }
 
 // Create a button that leads back to index page
-export function createBackButton(buttons) {
-    createButton(buttons, "󰌍 Back", "b", "/index.html");
+export function createBackButton(buttons, dest) {
+    createButton(buttons, "󰌍 Back", "b", dest);
 }
 
 // Listens for pressing of the short cut keys of each menu item

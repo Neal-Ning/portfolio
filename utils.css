@@ -22,20 +22,19 @@
 .db-buttons {
     min-height: 0px;
 
-    display: grid;
-    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* A dashboard div holding a button */
 .db-button {
-    min-height: 75px;
-    padding-left: 5px;
-    padding-right: 10px;
+    padding: 20px 10px;
     font-size: 30px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 32px;
 }
 
 /* Button style on hover or pressing shortcut */
@@ -45,3 +44,4 @@
     color: black;
     cursor: pointer;
 }
+
