@@ -77,45 +77,55 @@ export async function loadData(name) {
     return await response.json();
 }
 
-// Display the data in structure: Name, text, exp, links
+// Display the data in structure: Name, text, pictures, exp, links, etc
 export function displayData(container, data) {
     // Find container and make divider
-    const {name, text, exp, links} = data;
     const divider = document.createElement("div");
     divider.classList.add('divider-dashed');
 
-    // Create a project name title
-    const nameEle = document.createElement("p");
-    nameEle.innerText = name;
-    nameEle.style = "font-size: 30px; font-weight: bold";
-    container.appendChild(nameEle);
-    container.appendChild(divider.cloneNode());
+    const entries = Object.entries(data);
+    for (const [idx, [key, value]] of entries.entries()) {
 
-    // Create div for detailed project description
-    const textEle = document.createElement("div");
-    text.forEach(paragraph => {
-        const paragraphEle = document.createElement("p");
-        paragraphEle.innerText = paragraph;
-        textEle.appendChild(paragraphEle);
-    });
-    container.appendChild(textEle);
-    container.appendChild(divider.cloneNode());
+        if (key === "name") {
+            // Create a project name title
+            const nameEle = document.createElement("p");
+            nameEle.innerText = value;
+            nameEle.style = "font-size: 30px; font-weight: bold";
+            container.appendChild(nameEle);
 
-    // Create div for skills and experiences
-    const expEle = document.createElement("div");
-    exp.forEach(point => {
-        const eEle = document.createElement("p");
-        eEle.innerText = point;
-        expEle.appendChild(eEle);
-    });
-    container.appendChild(expEle);
-    container.appendChild(divider.cloneNode());
-    
-    // Create div for project links
-    const linksEle = document.createElement("div");
-    linksEle.classList.add("flex-container");
-    links.forEach(link => {
-        createButton(linksEle, link.text, "", link.sc, link.href, "");
-    });
-    container.appendChild(linksEle);
+        } else if (key === "text") {
+            // Create div for detailed project description
+            const textEle = document.createElement("div");
+            value.forEach(paragraph => {
+                const paragraphEle = document.createElement("p");
+                paragraphEle.innerText = paragraph;
+                textEle.appendChild(paragraphEle);
+            });
+            container.appendChild(textEle);
+
+        } else if (key === "exp") {
+            // Create div for skills and experiences
+            const expEle = document.createElement("div");
+            value.forEach(point => {
+                const eEle = document.createElement("p");
+                eEle.innerText = point;
+                expEle.appendChild(eEle);
+            });
+            container.appendChild(expEle);
+
+        } else if (key === "links") {
+            // Create div for project links
+            const linksEle = document.createElement("div");
+            linksEle.classList.add("flex-container");
+            value.forEach(link => {
+                createButton(linksEle, link.text, "", link.sc, link.href, "");
+            });
+            container.appendChild(linksEle);
+        }
+
+        // Create a dividor if not the last div
+        if (idx != entries.length - 1) {
+            container.appendChild(divider.cloneNode());
+        }
+    }
 }

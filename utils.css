@@ -23,7 +23,7 @@ body {
     font-family: "JetBrainsMonoNerd", monospace;
     font-size: 25px;
     background-color: black;
-    color: white;
+    color: orange;
     margin: 0px;
 }
 
@@ -67,7 +67,7 @@ body {
 /* Button style on hover or pressing shortcut */
 .button:hover,
 .button-select {
-    background-color: lightgrey;
+    background-color: orange;
     color: black;
     cursor: pointer;
 }
@@ -75,7 +75,7 @@ body {
 /* Solid divider (primary dividers) */
 .divider {
     border: none;
-    border-top: 2px solid white; 
+    border-top: 2px solid; 
     margin: 10px 0;
     width: 100%;
 }
@@ -83,7 +83,7 @@ body {
 /* Dashed divider (secondary dividers) */
 .divider-dashed {
     border: none;
-    border-top: 2px dashed white;
+    border-top: 2px dashed;
     margin: 10px 0;
     width: 99%;
 }

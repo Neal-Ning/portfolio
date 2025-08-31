@@ -1,0 +1,19 @@
+# npm files
+node_modules/
+**/node_modules/
+package.json
+package-lock.json
+
+# git files
+.git/
+.gitignore
+LICENSE
+
+# Read only files
+*.log
+*.md
+**.md
+
+# Docker files
+Dockerfile
+docker-compose.yml
