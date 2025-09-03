@@ -2,7 +2,7 @@
   {
     "name": "PARA (Paste and Run Anything)",
     "text": [
-            "Team project developed in close collaboration of Jetbrains (our client). We built an Intellij plugin that automatically installs missing java dependencies. The plugin compares a semantic/database-driven approach with an AI-based approach for resolving unresolved methods and classes.",
+            "PARA is a team project developed in close collaboration of Jetbrains (our client). We built an Intellij plugin that automatically installs missing java dependencies. The plugin compares a semantic/database-driven approach with an AI-based approach for resolving unresolved methods and classes.",
             "My noteable contributions: ",
             " Implemented Java parsing using Intellij's PSI tree to identify and classify unresolved classes and methods, as well as determining class owner ship of unresolved methods; ", 
             " Designed initial project structure, and integrated all core action listeners; ",
@@ -32,7 +32,7 @@
             " Keyboard control: It enables users to control precise mouse movements and actions (clicks and scrolls) via key strokes;",
             " Grid navigation: It displays a triggerable overlay that divides the screen into segments, allowing pointer snapping to grids mapped to specific keys;",
             " Customizable UX: Offers flexible key bindings and overlay visuals through user configuration.",
-            "For more detailed view of the project, please visit the github page linked below."
+            "For more detailed visual showcase of the project, please visit the github page linked below."
     ],
     "exp": [
         "󰟓 Go",
