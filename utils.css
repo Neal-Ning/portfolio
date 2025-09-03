@@ -23,7 +23,7 @@ body {
     font-family: "JetBrainsMonoNerd", monospace;
     font-size: 25px;
     background-color: black;
-    color: orange;
+    color: white;
     margin: 0px;
 }
 
@@ -67,7 +67,7 @@ body {
 /* Button style on hover or pressing shortcut */
 .button:hover,
 .button-select {
-    background-color: orange;
+    background-color: lightgrey;
     color: black;
     cursor: pointer;
 }

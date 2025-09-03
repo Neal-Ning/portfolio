@@ -1,62 +1,20 @@
 [
   {
-    "name": "󰕒 BudgetBuddy",
-    "desc": "A personal finance tracker",
+    "name": " PARA",
+    "desc": "An Intellij Plugin in collaboration with Jetbrains",
     "sc": "q",
-    "dest": "project.html?name=BudgetBuddy"
+    "dest": "project.html?name=PARA (Paste and Run Anything)"
   },
   {
-    "name": "󰖔 SkyCast",
-    "desc": "A weather forecast web app",
+    "name": "󰍾 nowaymouse",
+    "desc": "Keyboard-based mouse controller for wlroots compositors",
     "sc": "w",
-    "dest": "project.html?name=SkyCast"
+    "dest": "project.html?name=nowaymouse"
   },
   {
-    "name": "󰈤 QuizArena",
-    "desc": "A multiplayer quiz game",
+    "name": "󱔎 Serpentine",
+    "desc": "AI Motor Imagery ML Engineer",
     "sc": "e",
-    "dest": "project.html?name=QuizArena"
-  },
-  {
-    "name": "󰆍 RecipeGenie",
-    "desc": "An AI-powered recipe generator",
-    "sc": "r",
-    "dest": "project.html?name=RecipeGenie"
-  },
-  {
-    "name": "󰄉 HabitHero",
-    "desc": "A daily habit tracker",
-    "sc": "t",
-    "dest": "project.html?name=HabitHero"
-  },
-  {
-    "name": "󰈙 NoteLite",
-    "desc": "A lightweight note-taking app",
-    "sc": "y",
-    "dest": "project.html?name=NoteLite"
-  },
-  {
-    "name": "󰖆 FitPlanner",
-    "desc": "A workout routine planner",
-    "sc": "u",
-    "dest": "project.html?name=FitPlanner"
-  },
-  {
-    "name": "󰔳 StockWatch",
-    "desc": "A stock market tracking tool",
-    "sc": "i",
-    "dest": "project.html?name=StockWatch"
-  },
-  {
-    "name": "󰎈 MelodyMix",
-    "desc": "A music playlist generator",
-    "sc": "o",
-    "dest": "project.html?name=MelodyMix"
-  },
-  {
-    "name": "󰄛 CalmClock",
-    "desc": "A mindfulness meditation timer",
-    "sc": "p",
-    "dest": "project.html?name=CalmClock"
+    "dest": "project.html?name=Serpentine"
   }
 ]
