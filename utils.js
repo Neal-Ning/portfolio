@@ -1,4 +1,4 @@
-// Import markdown to html, and XSS purifier
+// Import markdown to html converter, and XSS purifier
 import { marked } from "https://cdn.jsdelivr.net/npm/marked@12/lib/marked.esm.js";
 import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.es.mjs";
 
