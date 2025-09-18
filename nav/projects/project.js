@@ -15,9 +15,11 @@ document.querySelector("title").innerText = projectName;
 const container = document.querySelector(".flex-grow-container");
 (async () => {
     try {
-        const projectData = await utils.loadData("projectData.json")
-        const singleProjectData = projectData.find(data => data.name === projectName);
-        utils.displayData(container, singleProjectData);
+        // const projectData = await utils.loadData("projectDataMd.md")
+        // const singleProjectData = projectData.find(data => data.name === projectName);
+        // const singleProjectData = await fetch(`../../data/${projectName}.md`).then(r => r.text());
+        const singleProjectData = await utils.loadData(projectName);
+        utils.displayDataMd(container, singleProjectData);
     } catch (err) {
         console.log(`Error: ${err}`);
     }

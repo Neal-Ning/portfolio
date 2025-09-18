@@ -11,8 +11,9 @@ utils.addButtonKeyListeners();
 const container = document.querySelector(".flex-grow-container");
 (async () => {
     try {
-        const aboutmeInfo = await utils.loadData("aboutmeInfo.json")
-        utils.displayData(container, aboutmeInfo);
+        // const aboutmeInfo = await utils.loadData("aboutmeInfo.json")
+        const aboutmeInfo  = await utils.loadData("aboutme");
+        utils.displayDataMd(container, aboutmeInfo);
     } catch (err) {
         console.log(`Error: ${err}`);
     }

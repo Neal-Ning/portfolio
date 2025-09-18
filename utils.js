@@ -1,3 +1,6 @@
+import { marked } from "https://cdn.jsdelivr.net/npm/marked@12/lib/marked.esm.js";
+import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.es.mjs";
+
 // Create an interative button given its container and data
 export function createButton(buttons, name, desc, sc, dest, data) {
     // Create div to contain text, shortcut key text, and some data
@@ -72,7 +75,13 @@ export function addButtonKeyListeners() {
 
 // Load json data from the data folder
 export async function loadData(name) {
-    const response = await fetch(`/data/${name}`);
+    const response = await fetch(`/data/${name}.md`);
+    if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
+    return await response.text();
+}
+
+export async function loadProjectList() {
+    const response = await fetch("/data/projects.json");
     if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
     return await response.json();
 }
@@ -128,4 +137,9 @@ export function displayData(container, data) {
             container.appendChild(divider.cloneNode());
         }
     }
+}
+
+export function displayDataMd(container, data) {
+    const html = marked.parse(data);
+    container.innerHTML = DOMPurify.sanitize(html);
 }
