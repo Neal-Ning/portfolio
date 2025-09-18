@@ -90,9 +90,6 @@ export async function loadJson(name) {
 
 // Display the markdown data
 export async function displayData(container, data, name) {
-    // Find container and make divider
-    const divider = document.createElement("div");
-
     // Convert markdown data to html and sanitize
     const html = marked.parse(data);
     container.innerHTML = DOMPurify.sanitize(html);
