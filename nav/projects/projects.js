@@ -14,7 +14,7 @@ utils.addButtonKeyListeners();
 // Fetch and load a list of projects
 (async () => {
     try {
-        const projects = await utils.loadProjectList();
+        const projects = await utils.loadJson("projects");
         for (const {name, desc, sc, dest, data} of projects) {
             utils.createButton(projectContainer, name, desc, sc, dest, data);
         }

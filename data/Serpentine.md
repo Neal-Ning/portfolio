@@ -18,6 +18,4 @@ Serpentine is an association and student team focused on Artificial Intelligence
 󱑽 Signal Processing,
 󰗣 Weights and Biases
 
-links: [
-  { href: https://serpentine.ai/, text: Website: serpentine.ai, sc: s }
-]
+### Links:

@@ -18,8 +18,8 @@ const container = document.querySelector(".flex-grow-container");
         // const projectData = await utils.loadData("projectDataMd.md")
         // const singleProjectData = projectData.find(data => data.name === projectName);
         // const singleProjectData = await fetch(`../../data/${projectName}.md`).then(r => r.text());
-        const singleProjectData = await utils.loadData(projectName);
-        utils.displayDataMd(container, singleProjectData);
+        const singleProjectData = await utils.loadMarkdown(projectName);
+        utils.displayData(container, singleProjectData, projectName);
     } catch (err) {
         console.log(`Error: ${err}`);
     }

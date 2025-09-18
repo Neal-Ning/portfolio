@@ -1,0 +1,32 @@
+[
+    {
+        "aboutme": [
+            {
+                "href": "https://github.com/Neal-Ning",
+                "text": " Github: Neal-Ning",
+                "sc": "g"
+            },
+            {
+                "href": "mailto:yichen.ning.2021@gmail.com",
+                "text": "󰇮 Email: yichen.ning.2021@gmail.com",
+                "sc": "m"
+            },
+            {
+                "href": "https://www.linkedin.com/in/yichen-ning-53aa02296/",
+                "text": " LinkedIn: Yichen (Neal) Ning",
+                "sc": "l"
+            }
+        ]
+    },
+    {
+        "nowaymouse": [
+            { "href": "https://github.com/Neal-Ning/nowaymouse", "text": " GitHub: nowaymouse", "sc": "g" },
+            { "href": "https://aur.archlinux.org/packages/nowaymouse-git", "text": "󰣇 AUR Repo: nowaymouse-git", "sc": "a" }
+        ]
+    },
+    {
+        "Serpentine": [
+            { "href": "https://serpentine.ai/", "text": "󱔎 Website: serpentine.ai", "sc": "s" }
+        ]
+    }
+]

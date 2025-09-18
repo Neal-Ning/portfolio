@@ -15,7 +15,5 @@ For more detailed visual showcase of the project, please visit the github page l
  Python,
  Git
 
-links: [
-  { href: https://github.com/Neal-Ning/nowaymouse, text:  GitHub: nowaymouse, sc: g },
-  { href: https://aur.archlinux.org/packages/nowaymouse-git, text: 󰣇 AUR Repo: nowaymouse-git, sc: a }
-]
+### Links:
+

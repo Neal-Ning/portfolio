@@ -1,3 +1,4 @@
+// Import markdown to html, and XSS purifier
 import { marked } from "https://cdn.jsdelivr.net/npm/marked@12/lib/marked.esm.js";
 import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.es.mjs";
 
@@ -73,73 +74,41 @@ export function addButtonKeyListeners() {
     });
 }
 
-// Load json data from the data folder
-export async function loadData(name) {
+// Load markdown project data from the data folder
+export async function loadMarkdown(name) {
     const response = await fetch(`/data/${name}.md`);
     if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
     return await response.text();
 }
 
-export async function loadProjectList() {
-    const response = await fetch("/data/projects.json");
+// Load json project data from the data folder
+export async function loadJson(name) {
+    const response = await fetch(`/data/${name}.json`);
     if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
     return await response.json();
 }
 
-// Display the data in structure: Name, text, pictures, exp, links, etc
-export function displayData(container, data) {
+// Display the markdown data
+export async function displayData(container, data, name) {
     // Find container and make divider
     const divider = document.createElement("div");
-    divider.classList.add('divider-dashed');
 
-    const entries = Object.entries(data);
-    for (const [idx, [key, value]] of entries.entries()) {
-
-        if (key === "name") {
-            // Create a project name title
-            const nameEle = document.createElement("p");
-            nameEle.innerText = value;
-            nameEle.style = "font-size: 30px; font-weight: bold";
-            container.appendChild(nameEle);
-
-        } else if (key === "text") {
-            // Create div for detailed project description
-            const textEle = document.createElement("div");
-            value.forEach(paragraph => {
-                const paragraphEle = document.createElement("p");
-                paragraphEle.innerText = paragraph;
-                textEle.appendChild(paragraphEle);
-            });
-            container.appendChild(textEle);
-
-        } else if (key === "exp") {
-            // Create div for skills and experiences
-            const expEle = document.createElement("div");
-            value.forEach(point => {
-                const eEle = document.createElement("p");
-                eEle.innerText = point;
-                expEle.appendChild(eEle);
-            });
-            container.appendChild(expEle);
-
-        } else if (key === "links") {
-            // Create div for project links
-            const linksEle = document.createElement("div");
-            linksEle.classList.add("flex-container");
-            value.forEach(link => {
-                createButton(linksEle, link.text, "", link.sc, link.href, "");
-            });
-            container.appendChild(linksEle);
-        }
-
-        // Create a dividor if not the last div
-        if (idx != entries.length - 1) {
-            container.appendChild(divider.cloneNode());
-        }
-    }
-}
-
-export function displayDataMd(container, data) {
+    // Convert markdown data to html and sanitize
     const html = marked.parse(data);
     container.innerHTML = DOMPurify.sanitize(html);
+
+    // Load all project links
+    const projectLinks = await loadJson("projectLinks");
+    const links = projectLinks.find(block => block[name])[name];
+
+    // If project has links, make them clickable buttons
+    if (links) {
+        // Create div for project links
+        const linksEle = document.createElement("div");
+        linksEle.classList.add("flex-container");
+        links.forEach(link => {
+            createButton(linksEle, link.text, "", link.sc, link.href, "");
+        });
+        container.appendChild(linksEle);
+    }
 }
