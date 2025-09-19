@@ -72,7 +72,7 @@ body {
     cursor: pointer;
 }
 
-/* Solid divider (primary dividers) */
+/* Solid divider (primary dividers, rendered above back button) */
 .divider {
     border: none;
     border-top: 2px solid; 
@@ -80,8 +80,9 @@ body {
     width: 100%;
 }
 
-/* Dashed divider (secondary dividers) */
-.divider-dashed {
+/* Dashed divider (secondary dividers, rendered within md text) */
+.markdownbody hr,
+hr {
     border: none;
     border-top: 2px dashed;
     margin: 10px 0;

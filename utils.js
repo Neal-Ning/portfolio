@@ -2,6 +2,12 @@
 import { marked } from "https://cdn.jsdelivr.net/npm/marked@12/lib/marked.esm.js";
 import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.es.mjs";
 
+// Simulate github style markdown
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+});
+
 // Create an interative button given its container and data
 export function createButton(buttons, name, desc, sc, dest, data) {
     // Create div to contain text, shortcut key text, and some data

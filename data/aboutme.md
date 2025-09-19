@@ -2,6 +2,8 @@
 
 I am a Software developer with hands-on experience in building applications, strong interest in emerging technologies, and practical involvement with Artificial Intelligence, Machine Learning, and Data-driven solutions.
 
+---
+
 ### Experiences
 
 - Completed Bachelor Computer science at Eindhoven University of Technology 2022-2025;,
@@ -12,5 +14,7 @@ I am a Software developer with hands-on experience in building applications, str
 - Proficient in learning, interpreting, and navigating complex codebases and frameworks;,
 - Experience in Artificial Intelligence / Machine Learning;,
 - More detailed experiences in the Projects section
+
+---
 
 ### Links
