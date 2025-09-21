@@ -9,20 +9,22 @@ marked.setOptions({
 });
 
 // Create an interative button given its container and data
-export function createButton(buttons, name, desc, sc, dest, data) {
+export function createButton(buttons, name, desc, sc, dest, data, newWin=false) {
     // Create div to contain text, shortcut key text, and some data
     const menuItemDiv = document.createElement("div");
     menuItemDiv.classList.add("button");
     menuItemDiv.dataset.sc = sc;
-        menuItemDiv.dataset.dest = dest;
+    menuItemDiv.dataset.dest = dest;
+    menuItemDiv.dataset.newWin = newWin;
     if (data) {
         menuItemDiv.dataset.data = JSON.stringify(data); 
     }
     menuItemDiv.innerHTML = `<span>${name}${desc && (" - " + desc)}</span><span>${sc}</span>`;
 
     // Clicking redirects to page whose path is stored in ${dest}
+    // If button is created with newWin=true, then clicking (or shortcut) opens new page
     menuItemDiv.addEventListener("click", () => {
-        window.location.href = dest;
+        newWin ? window.open(dest, "_blank", "noopener,noreferrer") : window.location.href = dest;
     });
 
     // Render the buttons
@@ -59,6 +61,7 @@ export function addButtonKeyListeners() {
 
         // Add key press select animation
         const btn = document.querySelector(`.button[data-sc="${key}"]`);
+        const {dest, newWin} = btn.dataset;
         if (btn) btn.classList.add("button-select");
     });
     document.body.addEventListener("keyup", (event) => {
@@ -75,7 +78,10 @@ export function addButtonKeyListeners() {
         if (btn) {
             btn.classList.remove("button-select");
             // Navigate to the page corresponding to the selected button
-            window.location.href = btn.dataset.dest; 
+            let {dest, newWin} = btn.dataset;
+            newWin === "true" 
+                ? window.open(dest, "_blank", "noopener,noreferrer")
+                : window.location.href = dest;
         }
     });
 }
@@ -110,7 +116,7 @@ export async function displayData(container, data, name) {
         const linksEle = document.createElement("div");
         linksEle.classList.add("flex-container");
         links.forEach(link => {
-            createButton(linksEle, link.text, "", link.sc, link.href, "");
+            createButton(linksEle, link.text, "", link.sc, link.href, "", true);
         });
         container.appendChild(linksEle);
     }
