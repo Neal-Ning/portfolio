@@ -1,8 +1,8 @@
-# nowaymouse,
+# nowaymouse
 
 ### Description: 
 
-nowaymouse is a Open-Source tool developed by me in Go and Python, designed to provide smooth and precise keyboard-driven control over the mouse pointer on wlroots based wayland compositors, such as Sway, Hyprland, and Wayfire.
+nowaymouse is a Open-Source tool developed by me in Go and Python, designed to provide smooth and precise keyboard-driven control over the mouse pointer on wlroots based wayland compositors, such as Sway, Hyprland, and Wayfire. (Sept. 2025)
 
 ---
 
@@ -14,10 +14,8 @@ For more detailed visual showcase of the project, please visit the github page l
 
 ---
 
-### Experience
-󰟓 Go,
- Python,
- Git
+### Experiences: 
+󰟓 Go,  Python,  Git
 
 ---
 

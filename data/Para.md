@@ -2,7 +2,7 @@
 
 ### Description: 
 
-PARA is a team project developed in close collaboration of Jetbrains (our client). We built an Intellij plugin that automatically installs missing java dependencies. The plugin compares a semantic/database-driven approach with an AI-based approach for resolving unresolved methods and classes. 
+PARA is a team project developed in close collaboration of Jetbrains (our client). We built an Intellij plugin that automatically installs missing java dependencies. The plugin compares a semantic/database-driven approach with an AI-based approach for resolving unresolved methods and classes. (Feb. 2025)
 
 ---
 
@@ -21,12 +21,5 @@ Note: Source code cannot be shared due to NDA restrictions.
 
 ### Experiences: 
 
- Kotlin,
- JAVA,
- Gradle,
- Maven,
- SCRUM,
-󰴒 Design Patterns,
- Intellij SDK,
- Plugin Development,
- Git
+ Kotlin,  JAVA,  Gradle,  Maven;
+ SCRUM, 󰴒 Design Patterns,  Intellij SDK,  Plugin Development,  Git.

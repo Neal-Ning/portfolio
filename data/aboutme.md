@@ -8,12 +8,20 @@ I am a Software developer with hands-on experience in building applications, str
 
 - Completed Bachelor Computer science at Eindhoven University of Technology 2022-2025;,
 - Studying Master Computer science at Eindhoven University of Technology 2025- ;,
-- Situated in Eindhoven, holder of EU citizenship;,
+- Situated in Eindhoven, holder of  EU citizenship;,
 - Experience working in collaborative team environments;,
 - Experience in rapid software development;,
 - Proficient in learning, interpreting, and navigating complex codebases and frameworks;,
 - Experience in Artificial Intelligence / Machine Learning;,
 - More detailed experiences in the Projects section
+
+---
+
+### Languages, tools & Frameowkrs:
+
+ JAVA,  Python,  JavaScript,  C++,  C;
+ Kotlin,  SQL, 󰟓 Go,  HTML,  CSS;
+ Git,  Linux,  Nvim,  Vim.
 
 ---
 

@@ -1,20 +1,44 @@
 [
-  {
-    "name": " PARA",
-    "desc": "An Intellij Plugin in collaboration with Jetbrains",
-    "sc": "q",
-    "dest": "project.html?name=Para"
-  },
-  {
-    "name": "󰍾 nowaymouse",
-    "desc": "Keyboard-based mouse controller for wlroots compositors",
-    "sc": "w",
-    "dest": "project.html?name=nowaymouse"
-  },
-  {
-    "name": "󱔎 Serpentine",
-    "desc": "AI Motor Imagery ML Engineer",
-    "sc": "e",
-    "dest": "project.html?name=Serpentine"
-  }
+    {
+        "name": " PARA",
+        "desc": "An Intellij Plugin in collaboration with Jetbrains",
+        "sc": "q",
+        "dest": "project.html?name=Para"
+    },
+    {
+        "name": "󰍾 nowaymouse",
+        "desc": "Keyboard-based mouse controller for wlroots compositors",
+        "sc": "w",
+        "dest": "project.html?name=nowaymouse"
+    },
+    {
+        "name": "󱔎 Serpentine",
+        "desc": "AI Motor Imagery ML Engineer",
+        "sc": "e",
+        "dest": "project.html?name=Serpentine"
+    },
+    {
+        "name": " Course probability & statistics",
+        "desc": "core methods data analysis and testing",
+        "sc": "r",
+        "dest": "project.html?name=ProbNStat"
+    },
+    {
+        "name": "󱇯 Course DBL Process Mining",
+        "desc": "Predictive data analysis",
+        "sc": "t",
+        "dest": "project.html?name=ProcessMining"
+    },
+    {
+        "name": "󰮆 Course Data Modelling & DataBases",
+        "desc": "Combines theory & practice in design",
+        "sc": "y",
+        "dest": "project.html?name=DataModelling"
+    },
+    {
+        "name": " Course Data Analytics for Engineers",
+        "desc": "Foundational data analysis",
+        "sc": "u",
+        "dest": "project.html?name=DataAnalytics"
+    }
 ]

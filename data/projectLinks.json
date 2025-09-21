@@ -28,5 +28,15 @@
         "Serpentine": [
             { "href": "https://serpentine.ai/", "text": "󱔎 Website: serpentine.ai", "sc": "s" }
         ]
+    },
+    {
+        "DataAnalytics": [
+            { "href": "/data/media/da-poster.pdf", "text": "Temperature vs Concentration of NO₂", "sc": "p" }
+        ]
+    },
+    {
+        "ProcessMining": [
+            { "href": "/data/media/pm-poster.pdf", "text": "Poster for Final Presentation", "sc": "p" }
+        ]
     }
 ]

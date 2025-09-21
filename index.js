@@ -8,7 +8,7 @@ const menu = [
         dest: "/nav/aboutme/aboutme.html"
     },
     {
-        name: "󰛨 Projects",
+        name: "󰛨 Projects & Experiences",
         sc: "p",
         dest: "/nav/projects/projects.html"
     },
