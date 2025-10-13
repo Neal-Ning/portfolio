@@ -18,27 +18,33 @@
         "dest": "project.html?name=Serpentine"
     },
     {
+        "name": " Junction x Delft Hackathon",
+        "desc": "2nd Place Winner",
+        "sc": "r",
+        "dest": "project.html?name=JunctionXDelft"
+    },
+    {
         "name": " Course probability & statistics",
         "desc": "core methods data analysis and testing",
-        "sc": "r",
+        "sc": "t",
         "dest": "project.html?name=ProbNStat"
     },
     {
         "name": "󱇯 Course DBL Process Mining",
         "desc": "Predictive data analysis",
-        "sc": "t",
+        "sc": "y",
         "dest": "project.html?name=ProcessMining"
     },
     {
         "name": "󰮆 Course Data Modelling & DataBases",
         "desc": "Combines theory & practice in design",
-        "sc": "y",
+        "sc": "u",
         "dest": "project.html?name=DataModelling"
     },
     {
         "name": " Course Data Analytics for Engineers",
         "desc": "Foundational data analysis",
-        "sc": "u",
+        "sc": "i",
         "dest": "project.html?name=DataAnalytics"
     }
 ]
